@@ -32,5 +32,21 @@ const HandleRegisterUser = async (req, res) => {
     }
 }
 
+const HandleLoginUser = async (req, res) => {
+    try {
+        const isUserExists = await UserSchema.findOne({ email: req.body.email });
+        if (!isUserExists) {
+            return res.status(404).json({ message: 'User Not Found' })
+        }
+        if (isUserExists.email === req.body.email && isUserExists.password === req.body.password) {
+            res.status(200).json({ message: "Logged In Successfully", user: isUserExists })
+        } else {
+            res.status(400).json({ message: "Invalid Username And Password" })
+        }
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: "Internal Server Error" })
+    }
+}
 
-export { HandleGetAllUsers, HandleRegisterUser };
+export { HandleGetAllUsers, HandleRegisterUser, HandleLoginUser };
