@@ -70,6 +70,7 @@ function Welcome({ navigation }) {
                     }} onPress={() => navigation.navigate("Signup")}>
                         <Text style={{ color: '#ffffff', fontSize: 18 }}>SIGNUP</Text>
                     </TouchableOpacity>
+                    
 
                     <TouchableOpacity style={{
                         borderWidth: 2,

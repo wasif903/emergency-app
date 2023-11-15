@@ -54,13 +54,16 @@ function Login({ navigation }) {
             />
 
 
-            <TouchableOpacity style={{
-                marginTop: 40,
-                backgroundColor: "#BD0606",
-                width: "50%",
-                padding: 15,
-                borderRadius: 50
-            }}>
+            <TouchableOpacity
+                onPress={() => navigation.navigate("Home")}
+
+                style={{
+                    marginTop: 40,
+                    backgroundColor: "#BD0606",
+                    width: "50%",
+                    padding: 15,
+                    borderRadius: 50
+                }}>
                 <Text style={{
                     color: "white",
                     textAlign: "center"

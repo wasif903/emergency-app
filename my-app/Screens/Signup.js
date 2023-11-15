@@ -11,8 +11,54 @@ function Signup({ navigation }) {
                 resizeMode="cover"
             />
 
+            <View style={{
+                flexDirection: "row",
+                justifyContent: "space-evenly",
+                alignItems: "center",
+                width: "100%",
+                paddingBottom: 25
+            }}>
+                <Text style={{
+                    backgroundColor: "#BD0606",
+                    color: "white",
+                    fontSize: 15,
+                    paddingLeft: 20,
+                    paddingRight: 20,
+                    paddingTop: 10,
+                    paddingBottom: 10,
+                    borderRadius: 20,
+                    fontWeight: "600"
+                }}>
+                    User
+                </Text>
 
-<Text style={{
+
+                {/* <Text style={{
+                    backgroundColor: "#BD0606",
+                    color: "white",
+                    paddingLeft: 20,
+                    paddingRight: 20,
+                    paddingTop: 10,
+                    paddingBottom: 10,
+                    borderRadius: 20
+                }}>
+                    Ambulance
+                </Text> */}
+
+                <Text style={{
+                    fontSize: 15,
+                    paddingLeft: 20,
+                    paddingRight: 20,
+                    paddingTop: 10,
+                    paddingBottom: 10,
+                    borderRadius: 20
+                }}>
+                    Ambulance
+                </Text>
+            </View>
+
+
+            <Text style={{
                 textAlign: "left",
                 width: "100%",
                 paddingStart: 40,
@@ -77,13 +123,17 @@ function Signup({ navigation }) {
             />
 
 
-            <TouchableOpacity style={{
-                marginTop: 40,
-                backgroundColor: "#BD0606",
-                width: "50%",
-                padding: 15,
-                borderRadius: 50
-            }}>
+            <TouchableOpacity
+
+                onPress={() => navigation.navigate("Home")}
+
+                style={{
+                    marginTop: 40,
+                    backgroundColor: "#BD0606",
+                    width: "50%",
+                    padding: 15,
+                    borderRadius: 50
+                }}>
                 <Text style={{
                     color: "white",
                     textAlign: "center"

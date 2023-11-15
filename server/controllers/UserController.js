@@ -8,7 +8,6 @@ const HandleGetAllUsers = (req, res) => {
     }
 }
 
-
 const HandleRegisterUser = async (req, res) => {
     try {
         const isUserExists = await UserSchema.findOne({ email: req.body.email });
