@@ -2,7 +2,7 @@ import { SafeAreaView, Text, View, Image, TouchableOpacity } from "react-native"
 import BottomTab from "../Components/BottomTab";
 
 
-function Home() {
+function Home({ navigation }) {
     return (
         <SafeAreaView style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: "white" }}>
             <View style={{
@@ -67,10 +67,10 @@ function Home() {
             <View style={{
                 flex: 0.2,
                 width: "100%",
-                justifyContent:"flex-end",
-                alignItems:"center"
+                justifyContent: "flex-end",
+                alignItems: "center"
             }}>
-                <BottomTab />
+                <BottomTab navigation={navigation} />
             </View>
         </SafeAreaView>
     );
